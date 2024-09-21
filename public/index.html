@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Wash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="ficon" href="assets/image/logo.jpeg">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white text-dark fixed-top">
+        <div class="container">
+            <!-- Add your logo (replace 'logo.png' with your actual logo file) -->
+            <a class="navbar-brand" href="#"><img src="assets/image/logo.jpeg" alt="Logo" width="50"></a>
+
+            <!-- Add a button for the mobile menu toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Create the navbar menu items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- hero section  -->
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <h4 class="mb-5">Order for Quick wash</h4>
+                    <form action="">
+                        <div class="form-group mb-2">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="number" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="address">Address</label>
+                            <div class="input-group">
+                                <input id="address" type="text" class="form-control" placeholder="Flat">
+                                <input type="text" class="form-control" placeholder="House">
+                                <input type="text" class="form-control" placeholder="Raod">
+                                <input type="text" class="form-control" placeholder="Area">
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="clothes">Clothes</label>
+                            <select name="category" id="category" class="form-control">
+                                <option value="">Select Category</option>
+                                <option value="dry_wash">Dry & Wash</option>
+                                <option value="loundary">Loundry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mt-2" id="dry-wash-subcategory-group" style="display: none;">
+                            <label for="subcategory">Cloth Type (Dry & Wash)</label>
+                            <select name="dry_wash_subcategory" id="dry_wash_subcategory" class="form-control">
+                                <option value="">Select cloth type</option>
+                                <option value="shirts" data-category="dry_wash">Shirts</option>
+                                <option value="pants" data-category="dry_wash">Pants</option>
+                                <option value="punjabi" data-category="dry_wash">Punjabi</option>
+                                <option value="others" data-category="dry_wash">Others</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mt-2" id="loundary-subcategory-group" style="display: none;">
+                            <label for="subcategory">Laundry Type</label>
+                            <select name="loundary_subcategory" id="loundary_subcategory" class="form-control">
+                                <option value="">Select laundry type</option>
+                                <option value="dry_cleaning" data-category="loundary">Dry Cleaning</option>
+                                <option value="ironing" data-category="loundary">Ironing</option>
+                                <option value="folding" data-category="loundary">Folding</option>
+                                <option value="others" data-category="loundary">Others</option>
+                            </select>
+                        </div>
+
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-success form-control">Order</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/image/hero.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- services  -->
+    <section id="services" style="margin-top:120px;">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="service-1 me-5">
+                    <img src="assets/image/select.svg" alt="" class="img-fluid service-icon">
+                    <h3>Fill the form</h3>
+                    <p>Fill out the form with your details and laundry preferences.</p>
+                </div>
+            
+                <div class="service-2 mx-5">
+                    <img src="assets/image/wash.svg" alt="" class="img-fluid service-icon" style="border-radius: 20px;">
+                    <h3>Select clothes</h3>
+                    <p>Select the clothes you want to send for laundry.</p>
+                </div>
+            
+                <div class="service-3 ms-5">
+                    <img src="assets/image/pay.svg" alt="" class="img-fluid service-icon">
+                    <h3>Click Order</h3>
+                    <p>Click the 'Order' button to submit your laundry request.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- terms  -->
+    <section id="terms" style="margin-top:150px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/image/terms.svg" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-3" style="color:green;">Terms and Conditions for Quick Wash</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <h5><i class="bi bi-check-square"></i> Acceptance of Terms</h5>
+                            <p>By using our website, you agree to these terms and conditions. If you don't agree, please do not use our services.</p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <h5><i class="bi bi-check-square"></i> Services</h5>
+                            <p>We provide laundry and dry-cleaning services through our website. Place orders, view pricing, and schedule pickups and deliveries online.</p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <h5><i class="bi bi-check-square"></i> User Responsibilities</h5>
+                            <p>You're responsible for maintaining your account information and passwords confidentially.</p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <h5><i class="bi bi-check-square"></i> Pickups and Deliveries</h5>
+                            <p>We'll schedule and provide pickup and delivery services at agreed-upon times. Ensure that items for pickup are properly packaged and ready for collection.</p>
+                        </li>
+            
+                        <li class="mb-3">
+                            <h5><i class="bi bi-check-square"></i> Quality and Liability</h5>
+                            <p>We'll make reasonable efforts to provide high-quality services. We're not liable for damage to items with special handling labels or pre-existing damage.</p>
+                        </li>
+            
+                        <li>
+                            <h5><i class="bi bi-check-square"></i> Termination and Changes</h5>
+                            <p>We reserve the right to terminate accounts and update these terms and conditions. Please review them periodically.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="d-flex justify-content-between">
+            <div>
+                <img src="assets/image/logo.png" alt="logo">
+            </div>
+            <div>
+                <p>&copy;2023 All Rights Reserved | Quick wash</p>
+            </div>
+            <div></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script>
+        // JavaScript to show/hide subcategories based on category selection
+        const categorySelect = document.getElementById("category");
+        const dryWashSubcategoryGroup = document.getElementById("dry-wash-subcategory-group");
+        const dryWashSubcategorySelect = document.getElementById("dry_wash_subcategory");
+        const loundarySubcategoryGroup = document.getElementById("loundary-subcategory-group");
+        const loundarySubcategorySelect = document.getElementById("loundary_subcategory");
+    
+        categorySelect.addEventListener("change", function () {
+            const selectedCategory = categorySelect.value;
+    
+            // Hide all subcategory groups
+            dryWashSubcategoryGroup.style.display = "none";
+            loundarySubcategoryGroup.style.display = "none";
+    
+            // Reset subcategory selections
+            dryWashSubcategorySelect.value = "";
+            loundarySubcategorySelect.value = "";
+    
+            // Show the appropriate subcategory group based on the selected category
+            if (selectedCategory === "dry_wash") {
+                dryWashSubcategoryGroup.style.display = "block";
+            } else if (selectedCategory === "loundary") {
+                loundarySubcategoryGroup.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
